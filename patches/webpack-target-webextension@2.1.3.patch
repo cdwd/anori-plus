@@ -1,0 +1,16 @@
+diff --git a/lib/webpack5/NoDangerNamePlugin.js b/lib/webpack5/NoDangerNamePlugin.js
+index 4d43ed542e4a653b00ad8ca0551d803186aaa7e2..3c04f7ac50eccbfdd31cd6830df2fff342c246ec 100644
+--- a/lib/webpack5/NoDangerNamePlugin.js
++++ b/lib/webpack5/NoDangerNamePlugin.js
+@@ -20,8 +20,9 @@ module.exports = class WebExtensionNoDangerNamePlugin {
+       const with_ = []
+       const withTilde = []
+       for (const file in compilation.assets) {
+-        if (file.startsWith('_')) {
+-          if (file.startsWith('_locales/') || file === '_locales') {
++        const normalizedFile = String(file).replaceAll('\\', '/')
++        if (normalizedFile.startsWith('_')) {
++          if (normalizedFile.startsWith('_locales/') || normalizedFile === '_locales') {
+           } else with_.push(String(file))
+         }
+         if (file.includes('~')) withTilde.push(String(file))

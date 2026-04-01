@@ -1,0 +1,102 @@
+.SearchWidget {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.9rem;
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+
+  .search-input-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-input {
+    flex-grow: 1;
+    min-width: 0;
+    border: 2px solid hsla(var(--text-hsl) / 0.1);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-button {
+    flex-shrink: 0;
+  }
+
+  .search-engines-scroll {
+    margin-top: 0.75rem;
+    max-width: 100%;
+  }
+
+  .search-engines-scroll-viewport {
+    padding-bottom: 0.25rem;
+  }
+
+  .search-engine-buttons {
+    display: flex;
+    gap: 0.45rem;
+    width: max-content;
+    padding-right: 0.2rem;
+
+    .Button {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.SearchWidget-config {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+
+  .Input {
+    width: 100%;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .engines {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .engine-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    .Input {
+      flex-grow: 1;
+    }
+  }
+
+  .engine-controls {
+    display: flex;
+    gap: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .save-config {
+    margin-top: 16px;
+  }
+}

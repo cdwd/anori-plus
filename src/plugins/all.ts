@@ -9,6 +9,7 @@ import { notesPlugin } from "./notes/notes-plugin";
 import { picturePlugin } from "./picture/picture-plugin";
 import { recentlyClosedPlugin } from "./recently-closed/recently-closed-plugin";
 import { rssPlugin } from "./rss/rss-plugin";
+import { searchPlugin } from "./search/search-plugin";
 import { systemStatusPlugin } from "./system-status/system-status-plugin";
 import { tasksPlugin } from "./tasks/tasks-plugin";
 import { testPlugin } from "./test/test-plugin";
@@ -32,6 +33,7 @@ export const allPlugins: AnoriPlugin[] = [
   systemStatusPlugin,
   picturePlugin,
   ankiPlugin,
+  searchPlugin,
 ];
 
 if (X_MODE === "development") {

@@ -7,15 +7,15 @@
     "author": "OlegWock",
     "license": "AGPL-3.0",
     "scripts": {
-        "dev": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode development",
-        "production": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode production",
-        "dev:rsdoctor": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' RSDOCTOR='true' rspack build --mode development",
-        "production:rsdoctor": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' RSDOCTOR='true' rspack build --mode production",
-        "production:all-permissions": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode production --env targetBrowser=chrome-all-permissions",
-        "watch": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode development --watch",
-        "dev:ff": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode development --env targetBrowser=firefox",
-        "production:ff": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode production --env targetBrowser=firefox",
-        "watch:ff": "cross-env NODE_OPTIONS='--loader ts-node/esm --disable-warning=ExperimentalWarning' rspack build --mode development --watch --env targetBrowser=firefox",
+        "dev": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode development",
+        "production": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode production",
+        "dev:rsdoctor": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" RSDOCTOR=true rspack build --mode development",
+        "production:rsdoctor": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" RSDOCTOR=true rspack build --mode production",
+        "production:all-permissions": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode production --env targetBrowser=chrome-all-permissions",
+        "watch": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode development --watch",
+        "dev:ff": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode development --env targetBrowser=firefox",
+        "production:ff": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode production --env targetBrowser=firefox",
+        "watch:ff": "cross-env \"NODE_OPTIONS=--loader ts-node/esm --disable-warning=ExperimentalWarning\" rspack build --mode development --watch --env targetBrowser=firefox",
         "test": "vitest run",
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
@@ -122,12 +122,14 @@
         "patchedDependencies": {
             "@radix-ui/react-scroll-area": "patches/@radix-ui__react-scroll-area.patch",
             "framer-motion": "patches/framer-motion.patch",
-            "react-textarea-autosize": "patches/react-textarea-autosize.patch"
+            "react-textarea-autosize": "patches/react-textarea-autosize.patch",
+            "webpack-target-webextension@2.1.3": "patches/webpack-target-webextension@2.1.3.patch"
         }
     },
     "devDependencies": {
         "@testing-library/react": "^16.3.1",
         "jsdom": "^27.3.0",
         "vitest": "^4.0.16"
-    }
+    },
+    "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }
